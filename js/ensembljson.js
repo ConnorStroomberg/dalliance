@@ -229,9 +229,9 @@ EnsemblFeatureSource.prototype.fetch = function(chr, min, max, scale, types, poo
                     }
 
                     if (j.strand) {
-                        if (j.strand < 0) 
+                        if (j.strand < 0)
                             f.orientation = '-';
-                        else if (j.strand > 0) 
+                        else if (j.strand > 0)
                             f.orientation = '+';
                     }
 
@@ -246,7 +246,7 @@ EnsemblFeatureSource.prototype.fetch = function(chr, min, max, scale, types, poo
                             }
                         }
                     }
-        		    
+
                     if (notes.length > 0) {
                         f.notes = notes;
                     }

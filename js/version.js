@@ -14,7 +14,7 @@ var VERSION = {
     MAJOR:  0,
     MINOR:  13,
     MICRO:  7,
-    BRANCH: 'dev'
+    BRANCH: 'MOLGENIS'
 };
 
 VERSION.toString = function() {
