@@ -27,7 +27,7 @@ function MolgenisFeatureSource(source) {
     if (source.uri) {
       this.base = source.uri;
     } else if (source.entity) {
-        this.base = window.location.origin + '/api/v2/' + source.entity + '?' + Math.random();
+        this.base = window.location.origin + '/api/v2/' + source.entity;
     }else{
         throw new Error("Bad molgenis track configuration: please specify 'genome_attrs.chr' and 'genome_attrs.pos'");
     }
@@ -163,7 +163,7 @@ MolgenisFeatureSource.prototype.fetch = function(chr, min, max, scale, types, po
         throw new Error("Bad molgenis track configuration: please specify 'genome_attrs.chr' and 'genome_attrs.pos'");
     }
 
-    var url = this.base;
+    var url = this.base + '?' + (new Date()).getTime(); // cache buster
 
 
     if (source.attrs) {
