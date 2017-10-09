@@ -26,6 +26,7 @@ To build for use in MOLGENIS:
         npm install # Install dependencies
         gulp compile # Build Dalliance
         rename dalliance-all.js in the /build folder to dalliance-all.min.js
+        at the bottom of dalliance-all.min.js replace //# sourceMappingURL=dalliance-all.js.map with //# sourceMappingURL=/js/dalliance-all.js.map
         copy dalliance-all.min.js to the src/main/resources/js folder in the data-explorer module in the MOLGENIS repo
 
 Documentation
